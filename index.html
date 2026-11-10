@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7fb">
+    <meta name="description" content="A simple five-day weather forecast for cities around the world, powered by Open-Meteo.">
+    <title>Weatherly — Your local forecast</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Weatherly home">
+          <span class="brand-icon" aria-hidden="true">☼</span>
+          <span>weatherly<span class="brand-dot">.</span></span>
+        </a>
+        <p class="topbar-note">A little clarity for your day</p>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">YOUR WEATHER, AT A GLANCE</p>
+          <h1 id="page-title">Find your forecast.</h1>
+          <p class="intro-copy">A fresh look at the weather, wherever you are.</p>
+        </section>
+
+        <form class="search-form" id="search-form" role="search">
+          <label class="visually-hidden" for="city-input">Search for a city</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="city-input" name="city" type="search" placeholder="Try Addis Ababa, Tokyo, or Paris" autocomplete="off" required>
+          <button class="search-button" id="search-button" type="submit">
+            <span class="button-label">Search</span>
+            <span class="button-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <section class="results" aria-label="Weather forecast" aria-live="polite" aria-busy="false">
+          <div class="status-panel initial-state" id="status-panel">
+            <span class="status-art" aria-hidden="true">☀</span>
+            <h2>Start with a city</h2>
+            <p>Search for a place to see its current weather and five-day forecast.</p>
+          </div>
+          <div class="city-picker" id="city-picker" hidden></div>
+          <div class="weather-content" id="weather-content" hidden></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Forecasts made simple.</span>
+        <span>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></span>
+      </footer>
+    </div>
+  </body>
+</html>
